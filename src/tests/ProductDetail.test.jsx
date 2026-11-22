@@ -28,6 +28,8 @@ it("shows not found for a bad id", async () => {
   showPage();
   expect(await screen.findByText("Product not found")).toBeInTheDocument();
 });
+
+// first fetch loads the item, second fetch is the PATCH
 it("edit updates the price", async () => {
   global.fetch = vi
     .fn()
