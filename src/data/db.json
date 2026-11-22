@@ -1,0 +1,202 @@
+{
+    "store": [
+        {
+            "id": 1,
+            "name": "Polar Ke",
+            "description": "Go to Cafe for drinks and snacks",
+            "phone_number": "+254 700 000 000" 
+         }
+    ],
+    "settings": [
+            {
+                "currency": "KES",
+                "language": "en"
+            }
+        ],
+        "menu": [
+        {
+        "id": "1",
+        "name": "The Kickstart (Espresso / Americano)",
+        "description": "Bold, rich double-shot espresso served straight or topped with hot water.",
+        "category": "Hot Coffee",
+        "price": 250,
+        "image": "https://unsplash.com"
+        },
+        {
+        "id": "2",
+        "name": "Velvet Lace (Caffè Latte)",
+        "description": "Smooth double espresso topped with silky steamed milk and delicate latte art.",
+        "category": "Hot Coffee",
+        "price": 320,
+        "image": "https://unsplash.com"
+        },
+        {
+        "id": "3",
+        "name": "Cloud Nine (Cappuccino)",
+        "description": "Equal parts rich espresso, steamed milk, and airy microfoam.",
+        "category": "Hot Coffee",
+        "price": 300,
+        "image": "https://unsplash.com"
+        },
+        {
+        "id": "4",
+        "name": "Low-Top Classic (Flat White)",
+        "description": "Velvety microfoam poured over a double ristretto shot for a strong, creamy finish.",
+        "category": "Hot Coffee",
+        "price": 320,
+        "image": "https://unsplash.com"
+        },
+        {
+        "id": "5",
+        "name": "Midnight Drip (Café Mocha)",
+        "description": "Rich espresso blended with dark cocoa and steamed milk.",
+        "category": "Hot Coffee",
+        "price": 350,
+        "image": "https://unsplash.com"
+        },
+        {
+        "id": "6",
+        "name": "Street Runner (Iced Latte)",
+        "description": "Chilled double espresso poured over cold milk and ice.",
+        "category": "Iced Drinks",
+        "price": 350,
+        "image": "https://unsplash.com"
+        },
+        {
+        "id": "7",
+        "name": "Concrete Jungle (Cold Brew)",
+        "description": "Slow-steeped for 18 hours for a smooth, low-acid, high-caffeine chill.",
+        "category": "Iced Drinks",
+        "price": 350,
+        "image": "https://unsplash.com"
+        },
+        {
+        "id": "8",
+        "name": "Gold Standard (Iced Caramel Macchiato)",
+        "description": "Chilled milk layered with espresso and drizzled with buttery caramel sauce.",
+        "category": "Iced Drinks",
+        "price": 400,
+        "image": "https://unsplash.com"
+        },
+        {
+        "id": "9",
+        "name": "Park Bench (House Iced Tea)",
+        "description": "Freshly brewed Kenyan black tea chilled with lemon and light cane syrup.",
+        "category": "Iced Drinks",
+        "price": 280,
+        "image": "https://unsplash.com"
+        },
+        {
+        "id": "10",
+        "name": "Neon Zest (Hibiscus & Ginger Cooler)",
+        "description": "Tart hibiscus flower infusion spiced with fresh ginger and sparkling citrus.",
+        "category": "Iced Drinks",
+        "price": 350,
+        "image": "https://unsplash.com"
+        },
+        {
+        "id": "11",
+        "name": "Spice Route (Masala Chai Latte)",
+        "description": "Kenyan tea simmered with cardamom, cinnamon, ginger, and steamed milk.",
+        "category": "Tea & Specialty",
+        "price": 300,
+        "image": "https://unsplash.com"
+        },
+        {
+        "id": "12",
+        "name": "Greenlight (Matcha Latte)",
+        "description": "Ceremonial-grade green tea whisked into creamy steamed milk.",
+        "category": "Tea & Specialty",
+        "price": 400,
+        "image": "https://unsplash.com"
+        },
+        {
+        "id": "13",
+        "name": "Heavyweight Cocoa (Classic Hot Chocolate)",
+        "description": "Velvety melted dark chocolate whisked into steamed milk.",
+        "category": "Tea & Specialty",
+        "price": 320,
+        "image": "https://unsplash.com"
+        },
+        {
+        "id": "14",
+        "name": "Cooldown (Herbal Infusions)",
+        "description": "Soothing caffeine-free chamomile, peppermint, or lemongrass tea.",
+        "category": "Tea & Specialty",
+        "price": 250,
+        "image": "https://unsplash.com"
+        },
+        {
+        "id": "15",
+        "name": "Golden Layers (Butter Croissant)",
+        "description": "Flaky, golden-baked French pastry made with rich cultured butter.",
+        "category": "Pastries & Bakery",
+        "price": 280,
+        "image": "https://unsplash.com"
+        },
+        {
+        "id": "16",
+        "name": "Double Barrel (Pain au Chocolat)",
+        "description": "Crisp laminated pastry dough wrapped around two bars of dark chocolate.",
+        "category": "Pastries & Bakery",
+        "price": 320,
+        "image": "https://unsplash.com"
+        },
+        {
+        "id": "17",
+        "name": "Sweet Swirl (Cinnamon Roll)",
+        "description": "Soft brioche swirl layered with brown sugar, cinnamon, and vanilla glaze.",
+        "category": "Pastries & Bakery",
+        "price": 300,
+        "image": "https://unsplash.com"
+        },
+        {
+        "id": "18",
+        "name": "Old School Loaf (Banana Walnut Bread)",
+        "description": "Moist, spiced banana bread studded with toasted walnuts.",
+        "category": "Pastries & Bakery",
+        "price": 250,
+        "image": "https://unsplash.com"
+        },
+        {
+        "id": "19",
+        "name": "Blackout Square (Fudge Brownie)",
+        "description": "Dense, chewy dark chocolate brownie with a crackly top.",
+        "category": "Pastries & Bakery",
+        "price": 280,
+        "image": "https://unsplash.com"
+        },
+        {
+        "id": "20",
+        "name": "High-Top Hero (Chicken Pesto Panini)",
+        "description": "Grilled sourdough pressed with herb chicken, basil pesto, and melted mozzarella.",
+        "category": "Savory Bites",
+        "price": 650,
+        "image": "https://unsplash.com"
+        },
+        {
+        "id": "21",
+        "name": "Green Mile (Smashed Avocado Toast)",
+        "description": "Toasted artisan bread topped with seasoned avocado, chili flakes, and cherry tomatoes.",
+        "category": "Savory Bites",
+        "price": 550,
+        "image": "https://unsplash.com"
+        },
+        {
+        "id": "22",
+        "name": "The Corner Fold (Ham & Cheese Croissant)",
+        "description": "Warm butter croissant filled with smoked ham and melted cheddar cheese.",
+        "category": "Savory Bites",
+        "price": 450,
+        "image": "https://unsplash.com"
+        },
+        {
+        "id": "23",
+        "name": "Morning Shift (Spinach & Feta Quiche)",
+        "description": "Savory shortcrust tart baked with creamy eggs, baby spinach, and crumbled feta.",
+        "category": "Savory Bites",
+        "price": 480,
+        "image": "https://unsplash.com"
+        }     
+    ]
+}
