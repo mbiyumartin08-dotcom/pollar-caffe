@@ -1,5 +1,5 @@
-// src/components/LandingPage.jsx  (route: /)
-// Hero, About and footer. The navbar comes from PublicLayout.
+
+
 import { Link } from "react-router-dom";
 import hero from "../assets/hero.jpg";
 
