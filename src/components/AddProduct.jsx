@@ -14,7 +14,6 @@ function AddProduct() {
   const [discount, setDiscount] = useState("");
   const [minOrder, setMinOrder] = useState("");
   const [category, setCategory] = useState("");
-  const [subCategory, setSubCategory] = useState("");
   const [imagePreview, setImagePreview] = useState("");
 
   function handleImageChange(e) {
@@ -42,11 +41,20 @@ function AddProduct() {
       discount,
       minOrder: Number(minOrder),
       category,
-      subCategory,
       image: imagePreview,
     };
 
     addProduct(newProduct);
+
+    setName("");
+    setTopCategory("");
+    setDescription("");
+    setCostPrice("");
+    setSellPrice("");
+    setDiscount("");
+    setMinOrder("");
+    setCategory("");
+    setImagePreview("");
     navigate("/menu");
   }
 
@@ -68,12 +76,6 @@ function AddProduct() {
           ← Back to Menu
         </Link>
       </div>
-
-      {statusMsg && (
-        <div className="bg-green-100 text-green-700 px-4 py-2.5 rounded-lg text-sm font-semibold mb-4">
-          {statusMsg}
-        </div>
-      )}
 
       <form onSubmit={handleSubmit}>
         {/* Name & Description */}
@@ -135,7 +137,7 @@ function AddProduct() {
                   Cost Price
                 </label>
                 <div className="flex items-center border border-gray-200 rounded-lg px-3 py-2 bg-white">
-                  <span className="text-gray-400 text-xs mr-1.5">$</span>
+                  <span className="text-gray-400 text-xs mr-1.5">Ksh</span>
                   <input
                     type="number"
                     step="0.01"
@@ -151,7 +153,7 @@ function AddProduct() {
                   Sell Price
                 </label>
                 <div className="flex items-center border border-gray-200 rounded-lg px-3 py-2 bg-white">
-                  <span className="text-gray-400 text-xs mr-1.5">$</span>
+                  <span className="text-gray-400 text-xs mr-1.5">Ksh</span>
                   <input
                     type="number"
                     step="0.01"
@@ -166,17 +168,12 @@ function AddProduct() {
                 <label className="block text-xs text-gray-500 mb-1">
                   Discount
                 </label>
-                <select
+                <input
+                  type="text"
                   value={discount}
                   onChange={(e) => setDiscount(e.target.value)}
                   className="w-full border border-gray-200 rounded-lg px-3 py-2 text-xs text-gray-800 bg-white focus:outline-none"
-                >
-                  <option value="0%">0%</option>
-                  <option value="5%">5%</option>
-                  <option value="10%">10%</option>
-                  <option value="15%">15%</option>
-                  <option value="20%">20%</option>
-                </select>
+                />
               </div>
 
               <div>
@@ -197,34 +194,16 @@ function AddProduct() {
           <div className="bg-white p-5 rounded-xl border border-gray-200">
             <h3 className="text-green-600 font-bold text-xs mb-4">Category</h3>
 
-            <div className="mb-4">
+            <div>
               <label className="block text-xs text-gray-500 mb-1">
                 Product Category
               </label>
-              <select
+              <input
+                type="text"
                 value={category}
                 onChange={(e) => setCategory(e.target.value)}
                 className="w-full border border-gray-200 rounded-lg px-3 py-2 text-xs text-gray-800 bg-white focus:outline-none"
-              >
-                <option value="Running">Running</option>
-                <option value="Lifestyle">Lifestyle</option>
-                <option value="Training">Training</option>
-              </select>
-            </div>
-
-            <div>
-              <label className="block text-xs text-gray-500 mb-1">
-                Product Sub-Category
-              </label>
-              <select
-                value={subCategory}
-                onChange={(e) => setSubCategory(e.target.value)}
-                className="w-full border border-gray-200 rounded-lg px-3 py-2 text-xs text-gray-800 bg-white focus:outline-none"
-              >
-                <option value="Road Running">Road Running</option>
-                <option value="Trail Running">Trail Running</option>
-                <option value="Track & Field">Track & Field</option>
-              </select>
+              />
             </div>
           </div>
         </div>
