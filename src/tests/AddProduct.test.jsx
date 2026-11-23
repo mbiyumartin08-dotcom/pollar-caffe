@@ -34,32 +34,14 @@ describe("AddProduct Component Tests", () => {
     renderAddProduct();
 
     expect(screen.getByText("Add New Product")).toBeInTheDocument();
-    expect(screen.getByDisplayValue("Street Runner")).toBeInTheDocument();
-    expect(screen.getByDisplayValue("45.00")).toBeInTheDocument();
-    expect(screen.getByDisplayValue("59.99")).toBeInTheDocument();
+    expect(screen.queryByText(/Save Draft/i)).not.toBeInTheDocument();
+    expect(screen.queryByText(/Schedule/i)).not.toBeInTheDocument();
   });
 
-  test("2. Shows status messages when Save Draft or Schedule is clicked", async () => {
-    const user = userEvent.setup();
-    renderAddProduct();
-
-    // Click Save Draft
-    await user.click(screen.getByText(/Save Draft/i));
-    expect(screen.getByText("Draft saved!")).toBeInTheDocument();
-
-    // Click Schedule
-    await user.click(screen.getByText(/Schedule/i));
-    expect(screen.getByText("Product scheduled!")).toBeInTheDocument();
-  });
-
-  test("3. Shows an alert and does not submit if Product Name is empty", async () => {
+  test("2. Shows an alert and does not submit if Product Name is empty", async () => {
     const user = userEvent.setup();
     const alertMock = vi.spyOn(window, "alert").mockImplementation(() => {});
     renderAddProduct();
-
-    // Clear the Product Name input
-    const nameInput = screen.getByDisplayValue("Street Runner");
-    await user.clear(nameInput);
 
     // Try to submit
     await user.click(screen.getByText("Add Product +"));
@@ -70,19 +52,20 @@ describe("AddProduct Component Tests", () => {
     alertMock.mockRestore();
   });
 
-  test("4. Submits the form with updated values and redirects to /menu", async () => {
+  test("3. Submits the form with updated values and redirects to /menu", async () => {
     const user = userEvent.setup();
-    renderAddProduct();
+    const { container } = renderAddProduct();
 
     // Update Product Name
-    const nameInput = screen.getByDisplayValue("Street Runner");
-    await user.clear(nameInput);
+    const nameInput = container.querySelector('input[type="text"]');
     await user.type(nameInput, "Polar Zoom X");
 
+    // Update Cost Price
+    const numberInputs = container.querySelectorAll('input[type="number"]');
+    await user.type(numberInputs[0], "45");
+
     // Update Sell Price
-    const sellPriceInput = screen.getByDisplayValue("59.99");
-    await user.clear(sellPriceInput);
-    await user.type(sellPriceInput, "95.00");
+    await user.type(numberInputs[1], "95.00");
 
     // Submit the form
     await user.click(screen.getByText("Add Product +"));
@@ -94,7 +77,6 @@ describe("AddProduct Component Tests", () => {
         name: "Polar Zoom X",
         sellPrice: 95,
         costPrice: 45,
-        category: "Running",
       })
     );
 

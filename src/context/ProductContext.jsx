@@ -1,8 +1,9 @@
 import { createContext, useContext } from "react";
-import useFetch from "../hooks/useFetch";
+import useFetch from "../hooks/UseFetch";
 
-
-const ProductsContext = createContext(null);
+export const ProductContext = createContext(null);
+export const ProductsContext = ProductContext;
+const PRODUCTS_URL = "http://localhost:3001/menu";
 
 export function ProductsProvider({ children }) {
   const { data, loading, error, refetch } = useFetch(PRODUCTS_URL);
@@ -15,7 +16,7 @@ export function ProductsProvider({ children }) {
   };
 
   return (
-    <ProductsContext.Provider value={value}>{children}</ProductsContext.Provider>
+    <ProductContext.Provider value={value}>{children}</ProductContext.Provider>
   );
 }
 
