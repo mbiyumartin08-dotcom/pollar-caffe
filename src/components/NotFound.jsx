@@ -1,4 +1,4 @@
-// src/components/NotFound.jsx  (route: * , anything no other route matched)
+
 import { Link } from "react-router-dom";
 
 export default function NotFound() {

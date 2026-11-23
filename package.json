@@ -4,15 +4,13 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "test": "vitest",
-    "server": "json-server --watch db.json --port 3001",
+    "server": "json-server --watch ./src/data/db.json --port 3001",
     "preview": "vite preview"
   },
-
   "dependencies": {
     "@tailwindcss/vite": "^4.3.5",
     "react": "^19.3.1",

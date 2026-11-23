@@ -1,9 +1,11 @@
-import React, { useState, useContext } from "react";
+
 import { Link, useNavigate } from "react-router-dom";
-import { ProductContext } from "../context/ProductContext";
+import { useProducts} from "../context/ProductContext";
+import { useEffect, useId, useRef, useState } from "react";
+import Icon from "./Icons";
 
 function AddProduct() {
-  const { addProduct } = useContext(ProductContext);
+  const { addProduct } = useProducts();
   const navigate = useNavigate();
 
   const [name, setName] = useState("");

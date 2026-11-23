@@ -6,8 +6,6 @@ import logo from "../assets/logo.png";
 
 const LINKS = [
   { to: "/menu", label: "Menu" },
-  { to: "/orders", label: "Orders" },
-  { to: "/dashboard", label: "Dashboard" },
 ];
 
 export default function Navbar() {
